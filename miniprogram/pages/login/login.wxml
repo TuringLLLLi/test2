@@ -1,0 +1,29 @@
+<!--pages/login/login.wxml-->
+
+
+
+<view class="wrapper">
+  <text class='title'>成绩查询系统</text>
+
+  <view class="loginform">
+    <view id="owl-login">
+
+      <image class="head" src="/images/owl-login.png"></image>
+      <view class="hand {{Passwordinput ? 'hand-password' : ''}}"></view>
+      <view class="hand hand-r {{Passwordinput ? 'hand-r-password' : ''}}"></view>
+
+      <view class="arms">
+        <image class="arm {{Passwordinput ? 'arm-password' : ''}}" src="/images/owl-login-arm.png"></image>
+        <image class="arm arm-r {{Passwordinput ? 'arm-r-password' : ''}}" src="/images/owl-login-arm.png"></image>
+      </view>
+
+    </view>
+    <view class="control-group">
+
+    <input class='control' placeholder='请输入用户名' bindinput='inputName'></input>
+    <input class='control' placeholder='请输入密码' bindinput='inputPassword' bindfocus="pwdFocus" bindblur="pwdBlur"></input>
+    <button class='bg-green margin-tb-sm lg' type='primary' bindtap='login'>登陆</button>
+
+    </view>
+  </view>
+</view>

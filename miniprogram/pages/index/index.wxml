@@ -1,0 +1,40 @@
+<!--index.wxml-->
+
+
+
+  <view class="text">{{text}}</view>
+  
+<view class="table">
+   <view class="table_title">
+      <text class="table_one">课程</text>
+      <text class="table_two">类型</text>
+      <text class="table_three">学分</text>
+      <text class="table_four">成绩</text>
+    </view>
+
+  <block wx:for="{{listData}}" wx:key="{{item.id}}" >
+    <view class="table_title_content" catchtap="onlineClick" data-bean='{{item}}'>
+      <i-cell class="table_one j jr" >{{item.course}}</i-cell>
+      <i-cell class="table_two j jr" >{{item.type}}</i-cell>
+      <i-cell class="table_three j jr" >{{item.cre}}</i-cell>
+      <i-cell class="table_four j jr" >{{item.score}}</i-cell>
+    </view>
+   </block>
+
+<i-modal title='{{listData4.course}}' visible="{{ visible1 }}" show-ok='{{ visible }}' bind:cancel="handleClose1">
+  <view class='model'>课堂表现：{{listData4.score1}}分</view>
+  <view class='model'>作业成绩：{{listData4.score2}}分</view>
+  <view class='model'>期末成绩：{{listData4.score3}}分</view>
+  <view class='model'>期末总分：{{listData4.score}}分</view>
+</i-modal>
+
+
+</view>
+  <view class="bottom">
+  <i-tabs current="{{ current }}" bindchange="handleChange" style="width:100%">
+    <i-tab key="tab1" title="2016"></i-tab>
+    <i-tab key="tab2" title="2017"></i-tab>
+    <i-tab key="tab3" title="2018"></i-tab>
+    <i-tab key="tab4" title="2019"></i-tab>
+  </i-tabs>
+</view>

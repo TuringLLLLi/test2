@@ -1,0 +1,18 @@
+<!--pages/me/me.wxml-->
+<!--未登录-->
+<view wx:if="{{!loginOK}}">
+<button type="primary" bindtap="denglu">登陆</button>
+</view>
+<!--登陆成功-->
+
+<view wx:else >
+    <i-cell-group>
+    <i-cell title="学号" value="{{number}}"></i-cell>
+    <i-cell title="姓名" value="{{name}}"></i-cell>
+    <i-cell title="班级" value="{{class}}"></i-cell>
+    <i-cell title="性别" value="{{sex}}"></i-cell>
+    <i-cell title="出生日期" value="{{birthday}}"></i-cell>
+    </i-cell-group>
+  <button bindtap="tuichu">退出</button>
+</view>
+

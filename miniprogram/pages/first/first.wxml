@@ -1,0 +1,12 @@
+<!--pages/first/first.wxml-->
+<view class="top">
+  <view class="view_score" catchtap='change1'>
+    <image   src="/images/score.png"></image>
+    <text class="text_score">成绩</text>
+  </view>
+
+  <view class="view_person" catchtap='change2'>
+    <image  src="/images/person.png"></image>
+    <text calss="text_person">个人中心</text>
+  </view>
+</view>
